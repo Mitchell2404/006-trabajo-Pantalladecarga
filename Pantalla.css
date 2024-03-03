@@ -1,0 +1,125 @@
+/*Estilos del titulo*/
+.titulo {
+  text-align: center; 
+  font-size: 28px; 
+  color: #333; 
+  margin-top: 20px; 
+  font-family: Arial, sans-serif; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  border-bottom: 2px solid #ff9900; 
+  padding-bottom: 5px; 
+}
+/*Posicion y tamano de div principal*/
+.container {
+  position: relative; 
+  height: 100vh;
+}
+/*Estilos de imagen*/
+.image-container {
+  border-radius: 50%;
+  width: 150px;
+  position: absolute; 
+  top: 30%; 
+  left: 50%; 
+}
+/*Estilos de imagen 2*/
+.image-container2 {
+  width: 150px; 
+  position: absolute; 
+  top: 30%; 
+  left: 50%; 
+  /*Animacion de caida*/
+  animation: bajar 3s ease-in-out forwards; 
+}
+/*Animacion de aparecer y girar*/
+.image-container.appear {
+  animation: aparecer 3s ease-in-out forwards, girar 2s linear infinite; 
+}
+/*Estilos del contenedor de cubos*/
+.cubes {
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  cursor: pointer;
+  top: 29%;
+  left: 49%;
+  animation: girar 4s linear infinite;
+}   
+/*Animacion de aparicion*/
+@keyframes aparecer {
+  from {
+    opacity: 0; 
+  }
+  to {
+    opacity: 1; 
+  }
+}
+/*Animacion de girar*/
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*Estilos de caida*/
+@keyframes bajar {
+  from {
+    top: -100px; 
+    opacity: 0; 
+  }
+  to {
+    top: 50%; 
+    opacity: 1; 
+  }
+}
+/*Estilos y animacion de los cubos*/
+.cubes .sk-cube {
+ width: 33%;
+ height: 33%;
+ margin: 0;
+ background-color: rgb(255, 255, 255);
+ float: left;
+ animation: sk-cubeGridScaleDelay 2s infinite ease-in-out;
+ visibility: visible;
+}
+.cubes .sk-cube1 {
+ animation-delay: 0.2s;
+}
+.cubes .sk-cube2 {
+ animation-delay: 0.2s;
+}
+.cubes .sk-cube3 {
+ animation-delay: 0.2s;
+}
+.cubes .sk-cube4 {
+ animation-delay: 0.2s;
+}
+.cubes .sk-cube5 {
+ animation-delay: 0.2s;
+}
+.cubes .sk-cube6 {
+ animation-delay: 0.2s;
+}
+.cubes .sk-cube7 {
+ animation-delay: 0.2s;
+}
+.cubes .sk-cube8 {
+ animation-delay: 0.2s;
+}
+.cubes .sk-cube9 {
+ animation-delay: 0.2s;
+}
+/*Animacion de los cubos*/
+@keyframes sk-cubeGridScaleDelay {
+ 0%,
+ 70%,
+ 100% {
+  transform: scale3D(1, 1, 1);
+ }
+ 35% {
+  transform: scale3D(0, 0, 1);
+ }
+}
